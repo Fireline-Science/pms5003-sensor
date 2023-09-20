@@ -1,0 +1,4 @@
+viam-sdk
+pms5003
+RPi.GPIO
+smbus
