@@ -2,3 +2,6 @@ viam-sdk
 pms5003
 RPi.GPIO
 smbus
+Pillow
+ST7735
+numpy
