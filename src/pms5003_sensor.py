@@ -8,6 +8,9 @@ from viam.resource.types import Model, ModelFamily
 
 from pms5003 import PMS5003, ReadTimeoutError
 
+import ST7735
+from PIL import Image, ImageDraw, ImageFont
+
 class MySensor(Sensor):
     # Subclass the Viam Arm component and implement the required functions
     MODEL: ClassVar[Model] = Model(ModelFamily("tuneni", "sensor"), "pms5003")
