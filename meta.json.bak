@@ -1,0 +1,13 @@
+{
+  "module_id": "tuneni:pms5003-sensor",
+  "visibility": "private",
+  "url": "",
+  "description": "This is the module to use the pms5003 sensor to collect particle data.",
+  "models": [
+    {
+      "api": "rdk:component:sensor",
+      "model": "tuneni:sensor:pms5003"
+    }
+  ],
+  "entrypoint": "exec.sh"
+}

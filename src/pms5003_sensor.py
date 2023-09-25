@@ -15,12 +15,12 @@ class MySensor(Sensor):
     @classmethod
     def new(cls, config: ComponentConfig, dependencies: Mapping[ResourceName, ResourceBase]):
         sensor = cls(config.name)
+
         return sensor
 
     async def get_readings(self, extra: Optional[Dict[str, Any]] = None, **kwargs) -> Mapping[str, Any]:
 
         pms5003 = PMS5003()
-
         try:
             readings = pms5003.read()
         except ReadTimeoutError:
@@ -31,8 +31,34 @@ class MySensor(Sensor):
         dust_pollen_readings = readings.data[2]
 
         data = {'Ultrafine': ultrafine_readings, 'Combustion': combustion_readings, 'Dust/Pollen': dust_pollen_readings}
+        screen_text = "\n".join(f"{key}: {value}" for key, value in data.items())
+        self.lcd_status("Sending PARTICLE readings: \n{}".format(screen_text))
 
         return data
+
+    def lcd_status(self, text):
+        # Create ST7735 LCD display class
+        st7735 = ST7735.ST7735(
+            port=0,
+            cs=1,
+            dc=9,
+            backlight=12,
+            rotation=270,
+            spi_speed_hz=10000000
+        )
+
+        # Initialize display
+        st7735.begin()
+        WIDTH = st7735.width
+        HEIGHT = st7735.height
+
+        # Set up canvas
+        img = Image.new('RGB', (WIDTH, HEIGHT), color=(0, 0, 0))
+        draw = ImageDraw.Draw(img)
+
+        # Write and display the text at the top in white
+        draw.text((0, 0), text, fill=(255, 255, 255))
+        st7735.display(img)
 
 
 async def main():
