@@ -85,9 +85,17 @@ Various federal and state authorities have established standard ways to measure 
 According to the California Air Resources Board:
 
 ```
-PM10 and PM2.5 often derive from different emissions sources, and also have different chemical compositions. Emissions from combustion of gasoline, oil, diesel fuel or wood produce much of the PM2.5 pollution found in outdoor air, as well as a significant proportion of PM10. PM10 also includes dust from construction sites, landfills and agriculture, wildfires and brush/waste burning, industrial sources, wind-blown dust from open lands, pollen and fragments of bacteria.
+PM10 and PM2.5 often derive from different emissions sources, and also have different chemical compositions. 
+Emissions from combustion of gasoline, oil, diesel fuel or wood produce much of the PM2.5 pollution found in 
+outdoor air, as well as a significant proportion of PM10. PM10 also includes dust from construction sites, 
+landfills and agriculture, wildfires and brush/waste burning, industrial sources, wind-blown dust from open 
+lands, pollen and fragments of bacteria.
 
-PM may be either directly emitted from sources (primary particles) or formed in the atmosphere through chemical reactions of gases (secondary particles) such as sulfur dioxide (SO2), nitrogen oxides (NOX), and certain organic compounds. These organic compounds can be emitted by both natural sources, such as trees and vegetation, as well as from man-made (anthropogenic) sources, such as industrial processes and motor vehicle exhaust. 
+PM may be either directly emitted from sources (primary particles) or formed in the atmosphere through 
+chemical reactions of gases (secondary particles) such as sulfur dioxide (SO2), nitrogen oxides (NOX), 
+and certain organic compounds. These organic compounds can be emitted by both natural sources, such as 
+trees and vegetation, as well as from man-made (anthropogenic) sources, such as industrial processes and 
+motor vehicle exhaust. 
 ```
 
 For the purposes of our Viam module, we are using the same reading labels as the Python pms5003 package. The following table describes each below.
