@@ -3,7 +3,7 @@
 This repo used the Viam example sensor module to create a Python sensor for use in Viam robots. It uses the pms5003 Python library- https://github.com/pimoroni/pms5003-python. The sensor is here and we used the connector to the enviroplus board- https://www.kiwi-electronics.com/en/pms5003-particulate-matter-sensor-with-cable--4415
 
 
-### Deploying to Viam
+## Deploying and Using with a Viam Robot
 
 1. Inside the repo, use the Viam CLI to create a meta.json template and register the module in the Viam registry/
 
@@ -73,4 +73,33 @@ Finally, you can use the API via the client sdks. I will post more about that as
 ### Set a secret if you want to use Github CI
 
 Instructions for setting the secret are [here](https://github.com/viamrobotics/upload-module#setting-cli-config-secret).
+
+## Sensor Readings
+
+The pms5003 sensor estimates the particulate concentration in the air using a laser which radiates airborne particles and uses the scattering of the light to estimate the size and quantity of particles in the air. The datasheet for this sensor can be found [here](https://www.digikey.com/en/htmldatasheets/production/2903006/0/0/1/pms5003-series-manual).
+
+For this module, we are retrieving three of the twelve readings that the pms5003 makes available. We are retrieving the three readings related to the estimated concentration of particles in a cubic meter.
+
+Various federal and state authorities have established standard ways to measure particulate pollution using a standard referred to as particulate matter or PM. This standard measures inhalable particle concentrations by dividing the concentrations into two overlapping measures- PM2.5 and PM10. PM10 is the concentration of particles 10 nanometers or smaller. PM2.5 is the concentration of particles 2.5 nano meters or smaller. PM1 is similarly particles less than 1 nano meter in size.
+
+According to the California Air Resources Board:
+
+```
+PM10 and PM2.5 often derive from different emissions sources, and also have different chemical compositions. Emissions from combustion of gasoline, oil, diesel fuel or wood produce much of the PM2.5 pollution found in outdoor air, as well as a significant proportion of PM10. PM10 also includes dust from construction sites, landfills and agriculture, wildfires and brush/waste burning, industrial sources, wind-blown dust from open lands, pollen and fragments of bacteria.
+
+PM may be either directly emitted from sources (primary particles) or formed in the atmosphere through chemical reactions of gases (secondary particles) such as sulfur dioxide (SO2), nitrogen oxides (NOX), and certain organic compounds. These organic compounds can be emitted by both natural sources, such as trees and vegetation, as well as from man-made (anthropogenic) sources, such as industrial processes and motor vehicle exhaust. 
+```
+
+For the purposes of our Viam module, we are using the same reading labels as the Python pms5003 package. The following table describes each below.
+
+
+| Sensor Label | Description | Values                                                              |
+|--------------|-------------|---------------------------------------------------------------------|
+| Ultrafine    | PM1.0       | Count of particles =< 1 micrometer in micro grams per cubic meter   |
+| Combusition  | PM2.5       | Count of particles =< 2.5 micrometer in micro grams per cubic meter |
+| Dust/Pollen  | PM10        | Count of particles =< 10 micrometer in micro grams per cubic meter  |
+
+
+
+
 
