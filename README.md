@@ -101,11 +101,11 @@ motor vehicle exhaust.
 For the purposes of our Viam module, we are using the same reading labels as the Python pms5003 package. The following table describes each below.
 
 
-| Sensor Label | Description | Values                                                              |
-|--------------|-------------|---------------------------------------------------------------------|
-| Ultrafine    | PM1.0       | Count of particles =< 1 micrometer in micro grams per cubic meter   |
-| Combusition  | PM2.5       | Count of particles =< 2.5 micrometer in micro grams per cubic meter |
-| Dust/Pollen  | PM10        | Count of particles =< 10 micrometer in micro grams per cubic meter  |
+| Sensor Label | Description | Values                                                            |
+|--------------|-------------|-------------------------------------------------------------------|
+| Ultrafine    | PM1.0       | Count of particles =< 1 micrometer in micrograms per cubic meter  |
+| Combusition  | PM2.5       | Count of particles =< 2.5 micrometer in micrograms per cubic meter |
+| Dust/Pollen  | PM10        | Count of particles =< 10 micrometer in micrograms per cubic meter |
 
 
 
