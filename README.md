@@ -102,10 +102,10 @@ For the purposes of our Viam module, we are using the same reading labels as the
 
 
 | Sensor Label | Description | Values                                                            |
-|--------------|-------------|-------------------------------------------------------------------|
-| Ultrafine    | PM1.0       | Count of particles =< 1 micrometer in micrograms per cubic meter  |
-| Combusition  | PM2.5       | Count of particles =< 2.5 micrometer in micrograms per cubic meter |
-| Dust/Pollen  | PM10        | Count of particles =< 10 micrometer in micrograms per cubic meter |
+|-------------|-------------|-------------------------------------------------------------------|
+| Ultrafine   | PM1.0       | Count of particles =< 1 micrometer in micrograms per cubic meter  |
+| Combustion  | PM2.5       | Count of particles =< 2.5 micrometer in micrograms per cubic meter |
+| Dust/Pollen | PM10        | Count of particles =< 10 micrometer in micrograms per cubic meter |
 
 
 
