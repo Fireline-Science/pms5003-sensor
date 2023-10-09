@@ -1,6 +1,6 @@
 {
   "module_id": "tuneni:pms5003-sensor",
-  "visibility": "private",
+  "visibility": "public",
   "url": "",
   "description": "This is the module to use the pms5003 sensor to collect particle data.",
   "models": [
