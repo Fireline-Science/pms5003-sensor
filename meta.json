@@ -1,7 +1,7 @@
 {
   "module_id": "tuneni:pms5003-sensor",
   "visibility": "public",
-  "url": "",
+  "url": "https://github.com/Fireline-Science/pms5003-sensor",
   "description": "This is the module to use the pms5003 sensor to collect particle data.",
   "models": [
     {
