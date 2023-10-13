@@ -45,7 +45,7 @@ viam module upload --version "0.0.1" --platform "linux/arm64" module.tar.gz
 
 ## Using the module from the Viam registry
 
-1. To "deploy" the module to the robot, you go to the Viam app and create a new sensor component from the Viam registry. Note that the registry often does not display the updated sensor, so you may have to reload the page.
+1. To "deploy" the module to the robot, you go to the Viam app and create a new sensor component from the Viam registry. Note that the registry often does not display the updated sensor, so you may have to reload the page. A direct link to the Viam respositoy is here- https://app.viam.com/module/tuneni/pms5003-sensor
 
 
 ![create component](./images/create_component.png)
